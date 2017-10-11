@@ -1,5 +1,5 @@
 {
-  "name": "react-native-random-bytes",
+  "name": "@rh389/react-native-random-bytes",
   "version": "0.1.0",
   "description":"Generate cryptographically-secure random bytes in react native",
   "main": "index.js",
