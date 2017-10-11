@@ -1,16 +1,26 @@
-
 # react-native-random-bytes
 
-## Getting started
+A library to generate cryptographically-secure random bytes. Uses `SecRandomCopyBytes` on iOS and `SecureRandom` on Android.
 
-`$ npm install react-native-random-bytes --save`
+## API
 
-### Mostly automatic installation
+### generateRandomBytes(length: number) => Promise\<Uint8Array\>
+
+```javascript
+import { generateRandomBytes } from 'react-native-random-bytes';
+
+generateRandomBytes(12).then(randomBytes => console.log(randomBytes));
+```
+
+## Installation
+
+`$ yarn add react-native-random-bytes`
+
+### Installation with react-native link
 
 `$ react-native link react-native-random-bytes`
 
 ### Manual installation
-
 
 #### iOS
 
@@ -33,21 +43,3 @@
   	```
       compile project(':react-native-random-bytes')
   	```
-
-#### Windows
-[Read it! :D](https://github.com/ReactWindows/react-native)
-
-1. In Visual Studio add the `RNRandomBytes.sln` in `node_modules/react-native-random-bytes/windows/RNRandomBytes.sln` folder to their solution, reference from their app.
-2. Open up your `MainPage.cs` app
-  - Add `using Random.Bytes.RNRandomBytes;` to the usings at the top of the file
-  - Add `new RNRandomBytesPackage()` to the `List<IReactPackage>` returned by the `Packages` method
-
-
-## Usage
-```javascript
-import RNRandomBytes from 'react-native-random-bytes';
-
-// TODO: What to do with the module?
-RNRandomBytes;
-```
-  
