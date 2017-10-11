@@ -13,5 +13,8 @@
   "license": "",
   "peerDependencies": {
     "react-native": "*"
+  },
+  "dependencies": {
+    "base64-js": "*"
   }
 }
