@@ -1,6 +1,6 @@
 {
-  "name": "@rh389/react-native-random-bytes",
-  "version": "0.1.0",
+  "name": "react-native-securerandom",
+  "version": "0.1.1",
   "description":"Generate cryptographically-secure random bytes in react native",
   "main": "index.js",
   "scripts": {
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rh389/react-native-random-bytes.git"
+    "url": "git+https://github.com/rh389/react-native-securerandom.git"
   },
   "keywords": [
     "react-native",
@@ -23,7 +23,7 @@
     "SecureRandom",
     "crypto"
   ],
-  "homepage": "https://github.com/rh389/react-native-random-bytes#readme",
+  "homepage": "https://github.com/rh389/react-native-securerandom#readme",
   "dependencies": {
     "base64-js": "*"
   }

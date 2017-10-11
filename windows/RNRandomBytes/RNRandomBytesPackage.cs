@@ -4,7 +4,7 @@ using ReactNative.UIManager;
 using System;
 using System.Collections.Generic;
 
-namespace Net.Rhogan.RNRandomBytes
+namespace Net.Rhogan.RNSecureRandom
 {
     /// <summary>
     /// Package defining core framework modules (e.g., <see cref="UIManagerModule"/>).
@@ -12,7 +12,7 @@ namespace Net.Rhogan.RNRandomBytes
     /// other framework parts (e.g., with the list of packages to load view
     /// managers from).
     /// </summary>
-    public class RNRandomBytesPackage : IReactPackage
+    public class RNSecureRandomPackage : IReactPackage
     {
         /// <summary>
         /// Creates the list of native modules to register with the react
@@ -24,7 +24,7 @@ namespace Net.Rhogan.RNRandomBytes
         {
             return new List<INativeModule>
             {
-                new RNRandomBytesModule(),
+                new RNSecureRandomModule(),
             };
         }
 

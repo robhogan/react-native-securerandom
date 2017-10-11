@@ -1,4 +1,4 @@
-package net.rhogan.rnrandombytes;
+package net.rhogan.rnsecurerandom;
 
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
@@ -8,17 +8,17 @@ import com.facebook.react.bridge.Promise;
 import java.security.SecureRandom;
 import android.util.Base64;
 
-public class RNRandomBytesModule extends ReactContextBaseJavaModule {
+public class RNSecureRandomModule extends ReactContextBaseJavaModule {
 
   private final ReactApplicationContext reactContext;
 
-  public RNRandomBytesModule(ReactApplicationContext reactContext) {
+  public RNSecureRandomModule(ReactApplicationContext reactContext) {
     super(reactContext);
     this.reactContext = reactContext;
   }
 
   @ReactMethod
-  public void generateRandomBytesAsBase64(int length, Promise promise) {
+  public void generateSecureRandomAsBase64(int length, Promise promise) {
     SecureRandom secureRandom = new SecureRandom();
     byte[] buffer = new byte[length];
     secureRandom.nextBytes(buffer);
@@ -27,6 +27,6 @@ public class RNRandomBytesModule extends ReactContextBaseJavaModule {
 
   @Override
   public String getName() {
-    return "RNRandomBytes";
+    return "RNSecureRandom";
   }
 }

@@ -1,10 +1,10 @@
 #import <Foundation/Foundation.h>
 
-#import "RNRandomBytes.h"
+#import "RNSecureRandom.h"
 #import <React/RCTUtils.h>
 #import <React/RCTLog.h>
 
-@implementation RNRandomBytes
+@implementation RNSecureRandom
 
 RCT_EXPORT_MODULE();
 
@@ -13,7 +13,7 @@ RCT_EXPORT_MODULE();
     return NO;
 }
 
-RCT_REMAP_METHOD(generateRandomBytesAsBase64,
+RCT_REMAP_METHOD(generateSecureRandomAsBase64,
                  withLength:(int)length
                  resolver:(RCTPromiseResolveBlock)resolve
                  rejecter:(RCTPromiseRejectBlock)reject)
@@ -23,7 +23,7 @@ RCT_REMAP_METHOD(generateRandomBytesAsBase64,
     if (result == errSecSuccess) {
         resolve([bytes base64EncodedStringWithOptions:0]);
     } else {
-        NSError *error = [NSError errorWithDomain:@"RNRandomBytes" code:result userInfo: nil];
+        NSError *error = [NSError errorWithDomain:@"RNSecureRandom" code:result userInfo: nil];
         reject(@"randombytes_error", @"Error generating random bytes", error);
     }
 }

@@ -4,17 +4,17 @@ using System.Collections.Generic;
 using Windows.ApplicationModel.Core;
 using Windows.UI.Core;
 
-namespace Net.Rhogan.RNRandomBytes
+namespace Net.Rhogan.RNSecureRandom
 {
     /// <summary>
     /// A module that allows JS to share data.
     /// </summary>
-    class RNRandomBytesModule : NativeModuleBase
+    class RNSecureRandomModule : NativeModuleBase
     {
         /// <summary>
-        /// Instantiates the <see cref="RNRandomBytesModule"/>.
+        /// Instantiates the <see cref="RNSecureRandomModule"/>.
         /// </summary>
-        internal RNRandomBytesModule()
+        internal RNSecureRandomModule()
         {
 
         }
@@ -26,7 +26,7 @@ namespace Net.Rhogan.RNRandomBytes
         {
             get
             {
-                return "RNRandomBytes";
+                return "RNSecureRandom";
             }
         }
     }

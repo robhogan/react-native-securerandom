@@ -129,9 +129,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RNRandomBytesModule.cs" />
-    <Compile Include="RNRandomBytesPackage.cs" />
-    <EmbeddedResource Include="Properties\RNRandomBytes.rd.xml" />
+    <Compile Include="RNSecureRandomModule.cs" />
+    <Compile Include="RNSecureRandomPackage.cs" />
+    <EmbeddedResource Include="Properties\RNSecureRandom.rd.xml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="$(ReactWindowsRoot)\react-native-windows\ReactWindows\ReactNative\ReactNative.csproj">

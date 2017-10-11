@@ -4,6 +4,6 @@
 #import <React/RCTBridgeModule.h>
 #endif
 
-@interface RNRandomBytes : NSObject <RCTBridgeModule>
+@interface RNSecureRandom : NSObject <RCTBridgeModule>
 
 @end
