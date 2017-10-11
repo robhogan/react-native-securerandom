@@ -2,9 +2,10 @@
 
 A library to generate cryptographically-secure random bytes. Uses `SecRandomCopyBytes` on iOS and `SecureRandom` on Android.
 
-## API
-
+## Usage
+The library exports a single function:
 ### generateRandomBytes(length: number) => Promise\<Uint8Array\>
+Takes a length, the number of bytes to generate, and returns a `Promise` that resolves with a `Uint8Array`.
 
 ```javascript
 import { generateRandomBytes } from 'react-native-random-bytes';
@@ -16,11 +17,11 @@ generateRandomBytes(12).then(randomBytes => console.log(randomBytes));
 
 `$ yarn add react-native-random-bytes`
 
-### Installation with react-native link
+### Automatic linking with react-native link
 
 `$ react-native link react-native-random-bytes`
 
-### Manual installation
+### Manual linking
 
 #### iOS
 
@@ -32,7 +33,7 @@ generateRandomBytes(12).then(randomBytes => console.log(randomBytes));
 #### Android
 
 1. Open up `android/app/src/main/java/[...]/MainActivity.java`
-  - Add `import com.reactlibrary.RNRandomBytesPackage;` to the imports at the top of the file
+  - Add `import net.rhogan.rnrandombytes.RNRandomBytesPackage;` to the imports at the top of the file
   - Add `new RNRandomBytesPackage()` to the list returned by the `getPackages()` method
 2. Append the following lines to `android/settings.gradle`:
   	```
