@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using Windows.ApplicationModel.Core;
 using Windows.UI.Core;
+using System.Security.Cryptography;
 
 namespace Net.Rhogan.RNSecureRandom
 {
