@@ -1,7 +1,7 @@
 # react-native-securerandom
 [![npm version](https://badge.fury.io/js/react-native-securerandom.svg)](https://badge.fury.io/js/react-native-securerandom)
 
-A library to generate cryptographically-secure random bytes. Uses `SecRandomCopyBytes` on iOS and `SecureRandom` on Android.
+A library to generate cryptographically-secure random bytes. Uses `SecRandomCopyBytes` on iOS, `SecureRandom` on Android and `System.Security.Cryptography.RandomNumberGenerator` on Windows.
 
 ## Usage
 The library exports a single function:
@@ -45,3 +45,7 @@ generateSecureRandom(12).then(randomBytes => console.log(randomBytes));
   	```
       compile project(':react-native-securerandom')
   	```
+
+#### Windows
+
+TODO
