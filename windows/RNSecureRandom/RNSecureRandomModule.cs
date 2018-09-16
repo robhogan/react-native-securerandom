@@ -29,5 +29,20 @@ namespace Net.Rhogan.RNSecureRandom
                 return "RNSecureRandom";
             }
         }
+        
+        [ReactMethod]
+        public void generateSecureRandomAsBase64(int numberOfBytes, IPromise promise)
+        {
+            try
+            {
+                RandomNumberGenerator csprng = RandomNumberGenerator.Create();
+                byte[] rawByteArray = new byte[numberOfBytes];
+                csprng.GetBytes(rawByteArray);
+                promise.Resolve(Convert.ToBase64String(rawByteArray));
+            } catch (Exception ex)
+            {
+                promise.Reject(ex);
+            }
+        }
     }
 }
