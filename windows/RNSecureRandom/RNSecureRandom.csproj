@@ -7,8 +7,8 @@
     <ProjectGuid>{78648660-AE9A-11E7-AB46-9DDA6E026AA1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Random.Bytes</RootNamespace>
-    <AssemblyName>Random.Bytes</AssemblyName>
+    <RootNamespace>SecureRandom</RootNamespace>
+    <AssemblyName>SecureRandom</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion>10.0.10586.0</TargetPlatformVersion>
