@@ -1,11 +1,9 @@
-/* @flow */
-
-import { NativeModules, Platform } from 'react-native';
+import { NativeModules } from 'react-native';
 import { toByteArray } from 'base64-js';
 
 const { RNSecureRandom } = NativeModules;
 
-export function generateSecureRandom(length: number): Promise<Uint8Array> {
+export function generateSecureRandom(length) {
     if (!RNSecureRandom || !RNSecureRandom.generateSecureRandomAsBase64) {
         throw Error('react-native-securerandom is not properly linked');
     }
