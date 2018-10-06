@@ -48,4 +48,9 @@ generateSecureRandom(12).then(randomBytes => console.log(randomBytes));
 
 #### Windows
 
-TODO
+See [react-native-windows](https://github.com/Microsoft/react-native-windows)
+
+1. In Visual Studio add `node_modules/react-native-securerandom/windows/RNSecureRandom.sln` folder to your solution, and reference from your app.
+2. Open up your app's `MainPage.cs`
+  - Add `using Net.Rhogan.RNSecureRandom.RNSecureRandom;` to the usings at the top of the file
+  - Add `new RNSecureRandomPackage()` to the `List<IReactPackage>` returned by the `Packages` method
