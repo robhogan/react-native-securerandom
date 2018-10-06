@@ -1,10 +1,10 @@
 {
   "name": "react-native-securerandom",
   "version": "0.2.0",
-  "description":"Generate cryptographically-secure random bytes in react native",
+  "description": "Generate cryptographically-secure random bytes in react native",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "flow && jest"
   },
   "author": "Rob Hogan <roberthogan@blueyonder.co.uk>",
   "license": "MIT",
@@ -28,5 +28,14 @@
   "homepage": "https://github.com/rh389/react-native-securerandom#readme",
   "dependencies": {
     "base64-js": "*"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
+    "flow-bin": "^0.78.0",
+    "jest": "^23.6.0",
+    "react-native": "^0.57.2"
   }
 }
