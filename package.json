@@ -6,7 +6,7 @@
   "scripts": {
     "test": "flow && jest"
   },
-  "author": "Rob Hogan <roberthogan@blueyonder.co.uk>",
+  "author": "Rob Hogan <npm@rhogan.net>",
   "license": "MIT",
   "peerDependencies": {
     "react-native": "*"
@@ -31,11 +31,16 @@
   },
   "devDependencies": {
     "@babel/core": "^7.1.2",
+    "@babel/plugin-transform-runtime": "^7.4.4",
     "@babel/preset-env": "^7.1.0",
-    "babel-core": "^7.0.0-bridge.0",
-    "babel-jest": "^23.6.0",
+    "babel-jest": "^24.8.0",
     "flow-bin": "^0.78.0",
-    "jest": "^23.6.0",
+    "jest": "^24.8.0",
     "react-native": "^0.57.2"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.js$": "<rootDir>/jest.babel.js"
+    }
   }
 }
