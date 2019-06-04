@@ -15,6 +15,7 @@ public class RNSecureRandomModule extends ReactContextBaseJavaModule {
   public RNSecureRandomModule(ReactApplicationContext reactContext) {
     super(reactContext);
     this.reactContext = reactContext;
+    PRNGFixes.apply();
   }
 
   @ReactMethod
