@@ -6,7 +6,11 @@
   "scripts": {
     "test": "flow && jest"
   },
-  "author": "Rob Hogan <npm@rhogan.net>",
+  "author": {
+    "name": "Rob Hogan",
+    "email": "npm@rhogan.net",
+    "url": "https://github.com/rh389"
+  },
   "license": "MIT",
   "peerDependencies": {
     "react-native": "*"
