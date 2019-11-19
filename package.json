@@ -6,6 +6,7 @@
   "scripts": {
     "test": "flow && jest"
   },
+  "types": "index.d.ts",
   "author": {
     "name": "Rob Hogan",
     "email": "npm@rhogan.net",
