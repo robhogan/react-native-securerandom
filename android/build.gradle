@@ -16,7 +16,7 @@ buildscript {
 }
 
 apply plugin: 'com.android.library'
-apply plugin: 'maven'
+apply plugin: 'maven-publish'
 
 def safeExtGet(prop, fallback) {
     rootProject.ext.has(prop) ? rootProject.ext.get(prop) : fallback
@@ -107,8 +107,8 @@ afterEvaluate { project ->
 
     android.libraryVariants.all { variant ->
         def name = variant.name.capitalize()
-        task "jar${name}"(type: Jar, dependsOn: variant.javaCompile) {
-            from variant.javaCompile.destinationDir
+        task "jar${name}"(type: Jar, dependsOn: variant.javaCompileProvider) {
+            from variant.javaCompileProvider.get().destinationDir
         }
     }
 
@@ -119,11 +119,11 @@ afterEvaluate { project ->
 
     task installArchives(type: Upload) {
         configuration = configurations.archives
-        repositories.mavenDeployer {
+        repositories.maven {
             // Deploy to react-native-event-bridge/maven, ready to publish to npm
-            repository url: "file://${projectDir}/../android/maven"
+            url = "file://${projectDir}/../android/maven"
 
-            configureReactNativePom pom
+            // configureReactNativePom pom
         }
     }
 }
