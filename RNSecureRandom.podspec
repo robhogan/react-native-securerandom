@@ -10,7 +10,8 @@ Pod::Spec.new do |s|
   s.homepage     = package["homepage"]
   s.license      = package["license"]
   s.author       = { "Rob Hogan" => "npm@rhogan.net" }
-  s.platform     = :ios, "7.0"
+  s.platform     = :ios, "7.0", :osx, "10.9"
+  s.osx.deployment_target = "10.9"
   s.source       = { :git => "https://github.com/robhogan/react-native-securerandom.git", :tag => "master" }
   s.source_files = "ios/RNSecureRandom.{h,m}"
   s.requires_arc = true
