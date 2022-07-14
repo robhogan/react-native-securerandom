@@ -87,20 +87,6 @@ def configureReactNativePom(def pom) {
 
 afterEvaluate { project ->
 
-    task androidJavadoc(type: Javadoc) {
-        source = android.sourceSets.main.java.srcDirs
-        classpath += files(android.bootClasspath)
-        project.getConfigurations().getByName('implementation').setCanBeResolved(true)
-        classpath += files(project.getConfigurations().getByName('implementation').asList())
-
-        include '**/*.java'
-    }
-
-    task androidJavadocJar(type: Jar, dependsOn: androidJavadoc) {
-        classifier = 'javadoc'
-        from androidJavadoc.destinationDir
-    }
-
     task androidSourcesJar(type: Jar) {
         classifier = 'sources'
         from android.sourceSets.main.java.srcDirs
@@ -116,16 +102,9 @@ afterEvaluate { project ->
 
     artifacts {
         archives androidSourcesJar
-        archives androidJavadocJar
     }
 
     task installArchives(type: Upload) {
         configuration = configurations.archives
-        repositories.maven {
-            // Deploy to react-native-event-bridge/maven, ready to publish to npm
-            url = "file://${projectDir}/../android/maven"
-
-            // configureReactNativePom pom
-        }
     }
 }
