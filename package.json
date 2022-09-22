@@ -10,7 +10,7 @@
   "author": {
     "name": "Rob Hogan",
     "email": "npm@rhogan.net",
-    "url": "https://github.com/rh389"
+    "url": "https://github.com/robhogan"
   },
   "license": "MIT",
   "peerDependencies": {
@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rh389/react-native-securerandom.git"
+    "url": "git+https://github.com/robhogan/react-native-securerandom.git"
   },
   "keywords": [
     "react-native",
@@ -30,7 +30,7 @@
     "RandomNumberGenerator",
     "Cryptography"
   ],
-  "homepage": "https://github.com/rh389/react-native-securerandom#readme",
+  "homepage": "https://github.com/robhogan/react-native-securerandom#readme",
   "dependencies": {
     "base64-js": "*"
   },
