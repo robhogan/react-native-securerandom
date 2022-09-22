@@ -350,7 +350,7 @@ PODS:
     - React-jsi (= 0.69.4)
     - React-logger (= 0.69.4)
     - React-perflogger (= 0.69.4)
-  - RNSecureRandom (1.0.0):
+  - RNSecureRandom (1.0.1):
     - React
   - SocketRocket (0.6.0)
   - Yoga (1.14.0)

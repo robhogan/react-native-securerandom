@@ -5,3 +5,5 @@ build/
 local.properties
 *.iml
 RNSecureRandomExample/
+flow-typed/
+__tests__/
